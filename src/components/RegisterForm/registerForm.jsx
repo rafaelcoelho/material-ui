@@ -3,25 +3,25 @@ import { TextField, Switch, Button, FormControlLabel } from "@material-ui/core";
 
 function RegisterForm() {
   const [name, setName] = useState("");
+  const [familyName, setFamilyName] = useState("");
 
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(name);
+        console.log(name, familyName);
       }}
     >
       <TextField
         value={name}
         onChange={(event) => {
-          let tmp = event.target.value
+          let tmp = event.target.value;
 
           if (tmp.length > 5) {
-            tmp = tmp.substring(0, 5)
+            tmp = tmp.substring(0, 5);
           }
 
-          setName(tmp)
-
+          setName(tmp);
         }}
         id="Name"
         label="Name"
@@ -32,6 +32,8 @@ function RegisterForm() {
         fullWidth
       />
       <TextField
+        value={familyName}
+        onChange={(event) => setFamilyName(event.target.value)}
         id="Family Name"
         label="Family Name"
         variant="outlined"

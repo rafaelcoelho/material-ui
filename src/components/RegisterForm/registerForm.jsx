@@ -56,7 +56,7 @@ function RegisterForm() {
         control={<Switch name="News" defaultChecked color="primary" />}
       />
 
-      <Button typeof="submit" variant="contained" color="primary">
+      <Button type="submit" variant="contained" color="primary">
         Register
       </Button>
     </form>

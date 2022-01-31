@@ -1,5 +1,5 @@
-import { Fragment } from 'react/cjs/react.production.min';
 import './App.css';
+import React, { Component, Fragment } from "react";
 import RegisterForm from './components/RegisterForm/registerForm';
 
 function App() {

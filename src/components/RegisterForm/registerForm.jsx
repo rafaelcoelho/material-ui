@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from "@material-ui/core/Button"
 
 function RegisterForm() {
   return ( 
@@ -18,9 +19,9 @@ function RegisterForm() {
       <label>News</label>
       <input type={"checkbox"}/>
 
-      <button typeof='submit'>
+      <Button typeof='submit' variant="contained" color="primary">
         Register
-      </button>
+      </Button>
     </form>
    );
 }

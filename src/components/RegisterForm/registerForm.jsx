@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Switch, Button, FormControlLabel } from "@material-ui/core";
 
 function RegisterForm() {
+  const [name, setName] = useState("");
+
   return (
-    <form>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        console.log(name);
+      }}
+    >
       <TextField
+        value={name}
+        onChange={(event) => {
+          let tmp = event.target.value
+
+          if (tmp.length > 5) {
+            tmp = tmp.substring(0, 5)
+          }
+
+          setName(tmp)
+
+        }}
         id="Name"
         label="Name"
         autoComplete="true"
         variant="outlined"
-        required="true"
+        required
         margin="normal"
         fullWidth
       />

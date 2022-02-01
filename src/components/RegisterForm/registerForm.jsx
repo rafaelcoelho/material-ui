@@ -12,7 +12,7 @@ function RegisterForm() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log(name, familyName);
+        console.log({name, familyName, cpf, offers, news});
       }}
     >
       <TextField

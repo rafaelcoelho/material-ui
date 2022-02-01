@@ -4,6 +4,9 @@ import { TextField, Switch, Button, FormControlLabel } from "@material-ui/core";
 function RegisterForm() {
   const [name, setName] = useState("");
   const [familyName, setFamilyName] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [news, setNews] = useState(false);
+  const [offers, setOffers] = useState(false);
 
   return (
     <form
@@ -42,6 +45,7 @@ function RegisterForm() {
       />
       <TextField
         id="CPF"
+        onChange={(event) => setCpf(event.target.value)}
         label="CPF"
         variant="outlined"
         margin="normal"

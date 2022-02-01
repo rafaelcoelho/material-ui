@@ -7,7 +7,7 @@ import 'fontsource-roboto'
 function App() {
   return (
     <Container component={'article'} maxWidth='sm'>
-      <Typography variant='h3' component={'h1'} align='center' >Register Form</Typography>
+      <Typography variant='h4' component={'h1'} align='center' >Register Form</Typography>
       <RegisterForm />
     </Container>
   );

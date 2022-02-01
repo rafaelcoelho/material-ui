@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Switch, Button, FormControlLabel } from "@material-ui/core";
 
-function RegisterForm() {
+function RegisterForm({ onSubmitHandler }) {
   const [name, setName] = useState("");
   const [familyName, setFamilyName] = useState("");
   const [cpf, setCpf] = useState("");
@@ -12,7 +12,7 @@ function RegisterForm() {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        console.log({name, familyName, cpf, offers, news});
+        onSubmitHandler({ name, familyName, cpf, offers, news });
       }}
     >
       <TextField

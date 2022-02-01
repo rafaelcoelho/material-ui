@@ -8,9 +8,13 @@ function App() {
   return (
     <Container component={'article'} maxWidth='sm'>
       <Typography variant='h4' component={'h1'} align='center' >Register Form</Typography>
-      <RegisterForm />
+      <RegisterForm onSubmitHandler={onSubmit} />
     </Container>
   );
+}
+
+function onSubmit(data) {
+  console.log(data)
 }
 
 export default App;

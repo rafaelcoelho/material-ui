@@ -20,8 +20,8 @@ function RegisterForm() {
         onChange={(event) => {
           let tmp = event.target.value;
 
-          if (tmp.length > 5) {
-            tmp = tmp.substring(0, 5);
+          if (tmp.length > 15) {
+            tmp = tmp.substring(0, 10);
           }
 
           setName(tmp);
@@ -54,12 +54,26 @@ function RegisterForm() {
 
       <FormControlLabel
         label="Offers"
-        control={<Switch name="Offers" defaultChecked color="primary" />}
+        control={
+          <Switch
+            checked={offers}
+            onChange={(event) => setOffers(event.target.checked)}
+            name="Offers"
+            color="primary"
+          />
+        }
       />
 
       <FormControlLabel
         label="News"
-        control={<Switch name="News" defaultChecked color="primary" />}
+        control={
+          <Switch
+            checked={news}
+            onChange={(event) => setNews(event.target.checked)}
+            name="News"
+            color="primary"
+          />
+        }
       />
 
       <Button type="submit" variant="contained" color="primary">
